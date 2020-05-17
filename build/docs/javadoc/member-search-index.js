@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"<Unnamed>","c":"PigLatinTranslator","l":"PigLatinTranslator()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"PigLatinTranslator","l":"translate(String)","url":"translate(java.lang.String)"}]
