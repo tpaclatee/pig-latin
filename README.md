@@ -11,5 +11,5 @@
 
 To use, download release java file
 
-Run file with command:<code>java .\PigLatinTranslator.java <your strings here>
+Run file with command:<code>java .\PigLatinTranslator.java <your strings here\>
 	</code>
