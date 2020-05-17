@@ -10,137 +10,145 @@ public class PigLatinTranslatorTest {
 
     @Before
     public void setup() {
-        pigLatinTranslator = new PigLatinTranslator();
+        setPigLatinTranslator(new PigLatinTranslator());
     }
 
     @Test
     public void testWordBeginningWithA() {
-        assertEquals("appleay", pigLatinTranslator.translate("apple"));
+        assertEquals("appleay", PigLatinTranslator.translate("apple"));
     }
 
 
     @Test
     public void testWordBeginningWithE() {
-        assertEquals("earay", pigLatinTranslator.translate("ear"));
+        assertEquals("earay", PigLatinTranslator.translate("ear"));
     }
 
 
     @Test
     public void testWordBeginningWithI() {
-        assertEquals("iglooay", pigLatinTranslator.translate("igloo"));
+        assertEquals("iglooay", PigLatinTranslator.translate("igloo"));
     }
 
 
     @Test
     public void testWordBeginningWithO() {
-        assertEquals("objectay", pigLatinTranslator.translate("object"));
+        assertEquals("objectay", PigLatinTranslator.translate("object"));
     }
 
 
     @Test
     public void testWordBeginningWithU() {
-        assertEquals("underay", pigLatinTranslator.translate("under"));
+        assertEquals("underay", PigLatinTranslator.translate("under"));
     }
 
 
     @Test
     public void testWordBeginningWithVowelAndFollowedByQu() {
-        assertEquals("equalay", pigLatinTranslator.translate("equal"));
+        assertEquals("equalay", PigLatinTranslator.translate("equal"));
     }
 
 
     @Test
     public void testWordBeginningWithP() {
-        assertEquals("igpay", pigLatinTranslator.translate("pig"));
+        assertEquals("igpay", PigLatinTranslator.translate("pig"));
     }
 
 
     @Test
     public void testWordBeginningWithK() {
-        assertEquals("oalakay", pigLatinTranslator.translate("koala"));
+        assertEquals("oalakay", PigLatinTranslator.translate("koala"));
     }
 
 
     @Test
     public void testWordBeginningWithX() {
-        assertEquals("enonxay", pigLatinTranslator.translate("xenon"));
+        assertEquals("enonxay", PigLatinTranslator.translate("xenon"));
     }
 
 
     @Test
     public void testWordBeginningWithQWithoutAFollowingU() {
-        assertEquals("atqay", pigLatinTranslator.translate("qat"));
+        assertEquals("atqay", PigLatinTranslator.translate("qat"));
     }
 
 
     @Test
     public void testChTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("airchay", pigLatinTranslator.translate("chair"));
+        assertEquals("airchay", PigLatinTranslator.translate("chair"));
     }
 
 
     @Test
     public void testQuTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("eenquay", pigLatinTranslator.translate("queen"));
+        assertEquals("eenquay", PigLatinTranslator.translate("queen"));
     }
 
 
     @Test
     public void testQuAndAPrecedingConsonantTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("aresquay", pigLatinTranslator.translate("square"));
+        assertEquals("aresquay", PigLatinTranslator.translate("square"));
     }
 
 
     @Test
     public void testThTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("erapythay", pigLatinTranslator.translate("therapy"));
+        assertEquals("erapythay", PigLatinTranslator.translate("therapy"));
     }
 
 
     @Test
     public void testThrTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("ushthray", pigLatinTranslator.translate("thrush"));
+        assertEquals("ushthray", PigLatinTranslator.translate("thrush"));
     }
 
 
     @Test
     public void testSchTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("oolschay", pigLatinTranslator.translate("school"));
+        assertEquals("oolschay", PigLatinTranslator.translate("school"));
     }
 
 
     @Test
     public void testYtTreatedLikeAVowelAtTheBeginningOfAWord() {
-        assertEquals("yttriaay", pigLatinTranslator.translate("yttria"));
+        assertEquals("yttriaay", PigLatinTranslator.translate("yttria"));
     }
 
 
     @Test
     public void testXrTreatedLikeAVowelAtTheBeginningOfAWord() {
-        assertEquals("xrayay", pigLatinTranslator.translate("xray"));
+        assertEquals("xrayay", PigLatinTranslator.translate("xray"));
     }
 
 
     @Test
     public void testYTreatedLikeAConsonantAtTheBeginningOfAWord() {
-        assertEquals("ellowyay", pigLatinTranslator.translate("yellow"));
+        assertEquals("ellowyay", PigLatinTranslator.translate("yellow"));
     }
 
 
     @Test
     public void testYTreatedLikeAVowelAtTheEndOfAConsonantCluster() {
-        assertEquals("ythmrhay", pigLatinTranslator.translate("rhythm"));
+        assertEquals("ythmrhay", PigLatinTranslator.translate("rhythm"));
     }
 
 
     @Test
     public void testYAsSecondLetterInTwoLetterWord() {
-        assertEquals("ymay", pigLatinTranslator.translate("my"));
+        assertEquals("ymay", PigLatinTranslator.translate("my"));
     }
 
 
     @Test
     public void testAWholePhrase() {
-        assertEquals("ickquay astfay unray", pigLatinTranslator.translate("quick fast run"));
+        assertEquals("ickquay astfay unray", PigLatinTranslator.translate("quick fast run"));
     }
+
+	public PigLatinTranslator getPigLatinTranslator() {
+		return pigLatinTranslator;
+	}
+
+	public void setPigLatinTranslator(PigLatinTranslator pigLatinTranslator) {
+		this.pigLatinTranslator = pigLatinTranslator;
+	}
 }
