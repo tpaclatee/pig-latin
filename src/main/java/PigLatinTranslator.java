@@ -2,9 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PigLatinTranslator {
-	boolean startsVowel;
+	static boolean startsVowel;
+	
+	public static void main(String[] args) {
+		@SuppressWarnings("unused")
+		int wordCount=0;
+		String result = "";
+		for (String s : args) {
+		result += "" + ((translate(s) + " "));
+		wordCount++;
+		}
+		System.out.println(result.trim());
+	}
 
-	public String translate(String input) {
+	public static String translate(String input) {
 		String[] splitInput = input.split(" ");
 		String translated = "";
 		for (String s : splitInput) {
@@ -13,7 +24,7 @@ public class PigLatinTranslator {
 		return translated.trim();
 	}
 
-	public String translator(String input) {
+	public static String translator(String input) {
 		StringBuffer s = new StringBuffer(input.toLowerCase().trim());
 		List<Character> charList = new ArrayList<Character>();
 		for (char ch : s.toString().toCharArray()) {
@@ -61,13 +72,13 @@ public class PigLatinTranslator {
 
 	}
 
-	private boolean isVowel(char ch) {
+	private static boolean isVowel(char ch) {
 		if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'y')
 			return true;
 		return false;
 	}
 
-	private int getIndexVowel(String s) {
+	private static int getIndexVowel(String s) {
 		int i = 0;
 		for (char ch : s.toCharArray()) {
 
@@ -80,7 +91,7 @@ public class PigLatinTranslator {
 		return -1;
 	}
 
-	private String getStringRepresentation(List<Character> list) {
+	private static String getStringRepresentation(List<Character> list) {
 		StringBuffer builder = new StringBuffer(list.size());
 		for (Character ch : list) {
 			builder.append(ch);
