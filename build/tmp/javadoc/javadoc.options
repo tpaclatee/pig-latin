@@ -1,0 +1,7 @@
+-classpath 'C:\\Users\\msale\\Exercism\\java\\pig-latin\\build\\classes\\java\\main;C:\\Users\\msale\\Exercism\\java\\pig-latin\\build\\resources\\main'
+-d 'C:\\Users\\msale\\Exercism\\java\\pig-latin\\build\\docs\\javadoc'
+-doctitle 'pig-latin API'
+-notimestamp 
+-quiet 
+-windowtitle 'pig-latin API'
+'C:\\Users\\msale\\Exercism\\java\\pig-latin\\src\\main\\java\\PigLatinTranslator.java'
